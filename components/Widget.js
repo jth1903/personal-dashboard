@@ -24,7 +24,13 @@ export default function WeatherWidget() {
         <div className="p-4 bg-black rounded-lg shadow">
             <h2>Weather</h2>
             {weather && weather.main ? (
-                <p>Temperature: {weather.main.temp}°F</p>
+                <div>
+                    <p>Temperature: {weather.main.temp}°F</p>
+                    <p>High: {weather.main.temp_max}°F</p>
+                    <p>Low: {weather.main.temp_min}°F</p>
+                    <p>Humidity: {weather.main.humidity}%</p>
+                    <p>Conditions: {weather.weather[0].description}</p>
+                </div>
             ) : (
                 <p>Loading...</p>
             )}
