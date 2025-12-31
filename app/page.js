@@ -5,16 +5,18 @@ import YouTubeWidget from "@/components/YouTubeWidget";
 export default function Home() {
   return (
     <main>
-
-      <h1>Personal Dashboard</h1>
-      <div style={{ display: 'flex', gap: '20px' }}>
-        <div style={{ border: '1px solid #ccc', padding: '10px', flex: 1 }}>
-          <ClockWidget />
-          <WeatherWidget />
-          <YouTubeWidget />
+      <div className="min-h-screen bg-gray-900">
+        <div className="container mx-auto py-8">
+          <h1 className="text-4xl font-bold text-white md-6">Personal Dashboard</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ClockWidget />
+              <WeatherWidget />
+              <div className="md:col-span-2">
+                <YouTubeWidget />
+              </div>
+            </div>
         </div>
       </div>
-
 
     </main>
   );

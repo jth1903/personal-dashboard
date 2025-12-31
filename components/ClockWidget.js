@@ -6,6 +6,8 @@ export default function ClockWidget() {
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
+
+        setTime(new Date());
         // Update time every second
         const interval = setInterval(() => {
             setTime(new Date());
