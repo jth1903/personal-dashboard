@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 
 export default function YouTubeWidget() {
   const [videos, setVideos] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('tailwind css');
-  const [inputValue, setInputValue] = useState('tailwind css');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [inputValue, setInputValue] = useState('');
   console.log(videos);
 
   useEffect(() => {
