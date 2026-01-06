@@ -4,9 +4,27 @@ import { useEffect, useState} from 'react';
 
 export default function ClockWidget() {
     const [time, setTime] = useState(new Date());
+    const [quote, setQuote] = useState(null);
 
     useEffect(() => {
 
+        const API_KEY = process.env.NEXT_PUBLIC_API_NINJAS_KEY;
+
+        fetch('https://api.api-ninjas.com/v1/quotes?category=happiness', {
+            headers: {
+                'X-Api-Key': API_KEY
+            }
+        })
+
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            setQuote(data[0])
+        })
+        .catch(error => console.error('Error:', error));
+    }, []);
+
+    useEffect(() => {
         setTime(new Date());
         // Update time every second
         const interval = setInterval(() => {
@@ -27,7 +45,11 @@ export default function ClockWidget() {
                     second: '2-digit'
                 })}
             </div>
-
+            {quote && (
+                <div className="mt-4 p-4 bg-gray-800 rounded">
+                    <p className="italic">"{quote.quote}"</p>
+                </div>
+            )}
         </div>
     );
 }
