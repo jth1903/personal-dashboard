@@ -45,11 +45,13 @@ export default function ClockWidget() {
                     second: '2-digit'
                 })}
             </div>
+            <div>
             {quote && (
                 <div className="mt-4 p-4 bg-gray-800 rounded">
                     <p className="italic">"{quote.quote}"</p>
                 </div>
             )}
+            </div>
         </div>
     );
 }
