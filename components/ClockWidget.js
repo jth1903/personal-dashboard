@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 
 export default function ClockWidget() {
     const [time, setTime] = useState(new Date());
@@ -16,12 +16,12 @@ export default function ClockWidget() {
             }
         })
 
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            setQuote(data[0])
-        })
-        .catch(error => console.error('Error:', error));
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                setQuote(data[0])
+            })
+            .catch(error => console.error('Error:', error));
     }, []);
 
     useEffect(() => {
@@ -46,11 +46,13 @@ export default function ClockWidget() {
                 })}
             </div>
             <div>
-            {quote && (
-                <div className="mt-4 p-4 bg-gray-800 rounded">
-                    <p className="italic">"{quote.quote}"</p>
-                </div>
-            )}
+                {quote && (
+                    <div className="mt-4 p-4 bg-gray-800 rounded">
+                        <p className="italic">"{quote.quote}"</p>
+                        <p className="text-right mt-2">- {quote.author}</p>
+                        <p className="text-sm mt-2">Source: {quote.work}</p>
+                    </div>
+                )}
             </div>
         </div>
     );
