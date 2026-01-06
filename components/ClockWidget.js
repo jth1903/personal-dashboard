@@ -10,7 +10,7 @@ export default function ClockWidget() {
 
         const API_KEY = process.env.NEXT_PUBLIC_API_NINJAS_KEY;
 
-        fetch('https://api.api-ninjas.com/v1/quotes?category=happiness', {
+        fetch('https://api.api-ninjas.com/v2/quoteoftheday', {
             headers: {
                 'X-Api-Key': API_KEY
             }
