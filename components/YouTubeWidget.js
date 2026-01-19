@@ -17,8 +17,7 @@ export default function YouTubeWidget() {
             .then((data) => {
                 setVideos(data.items.slice(0, 5));
             });
-    }, [searchQuery]); // searchQuery in the dependency array
-
+    }, [searchQuery]);
     return (
         <div className="p-4 bg-black rounded-lg shadow">
             <h2 className="text-lg font-bold mb-2">Youtube Search</h2>

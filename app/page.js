@@ -14,7 +14,7 @@ export default function Home() {
         margin: 0,
         padding: 0,
         display: 'flex',
-        flexdirection: 'column',
+        flexDirection: 'column',
         alignItems: 'center',
     };
 
@@ -28,6 +28,7 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <ClockWidget />
                         <WeatherWidget />
+
                         <div className="md:col-span-2">
                             <GoogleSearchWidget />
                         </div>
