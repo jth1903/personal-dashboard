@@ -24,7 +24,7 @@ export default function Home() {
         <main>
             <div style={bacgroundImageStyle}>
                 <div className="container mx-auto py-8">
-                    <h1 className="text-4xl font-bold text-white md-6">
+                    <h1 className="text-4xl font-bold text-black md-6">
                         Personal Dashboard
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
