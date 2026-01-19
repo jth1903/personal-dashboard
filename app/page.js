@@ -2,16 +2,14 @@ import ClockWidget from '@/components/ClockWidget';
 import WeatherWidget from '../components/WeatherWidget';
 import YouTubeWidget from '@/components/YouTubeWidget';
 import GoogleSearchWidget from '@/components/GoogleSearchWidget';
-import BackgroundImage from '../public/R.jpg';
 
 export default function Home() {
     const bacgroundImageStyle = {
-        backgroundImage:
-            'url(https://tse1.mm.bing.net/th/id/OIP.JGo4ZAK3IEfOBmftzqRBtAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3)',
+        backgroundImage: 'url(https://i.imgur.com/CZ4wB7E.jpeg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
-        width: '100vh',
+        width: '100%',
         color: 'white',
         margin: 0,
         padding: 0,
