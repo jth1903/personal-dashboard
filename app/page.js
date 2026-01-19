@@ -4,7 +4,7 @@ import YouTubeWidget from '@/components/YouTubeWidget';
 import GoogleSearchWidget from '@/components/GoogleSearchWidget';
 
 export default function Home() {
-    const bacgroundImageStyle = {
+    const backgroundImageStyle = {
         backgroundImage: 'url(https://i.imgur.com/CZ4wB7E.jpeg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -20,15 +20,14 @@ export default function Home() {
 
     return (
         <main>
-            <div style={bacgroundImageStyle}>
+            <div style={backgroundImageStyle}>
                 <div className="container mx-auto py-8">
-                    <h1 className="text-4xl font-bold text-black md-6">
+                    <h1 className="text-4xl font-bold text-black mb-6">
                         Personal Dashboard
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <ClockWidget />
                         <WeatherWidget />
-
                         <div className="md:col-span-2">
                             <GoogleSearchWidget />
                         </div>
