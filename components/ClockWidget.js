@@ -53,7 +53,6 @@ export default function ClockWidget() {
                     <div className="mt-4 p-4 bg-gray-800 rounded">
                         <p className="italic">"{quote.quote}"</p>
                         <p className="text-right mt-2">- {quote.author}</p>
-                        <p className="text-sm mt-2">Source: {quote.work}</p>
                     </div>
                 )}
             </div>
